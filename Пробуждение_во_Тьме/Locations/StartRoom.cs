@@ -1,5 +1,6 @@
 ﻿using System;
 using Пробуждение_Во_Тьме.Core;
+using Пробуждение_Во_Тьме.Items;
 
 namespace Пробуждение_Во_Тьме.Locations
 {
@@ -25,7 +26,10 @@ namespace Пробуждение_Во_Тьме.Locations
         {
             switch (choice)
             {
-                case "1": Items.Lantern.Take(); break;
+                case "1": // Взять фонарь
+                    var lantern = new Lantern();
+                    lantern.Take();
+                    Player.Inventory.Add(lantern); break;
                 case "2": ExamineSymbols(); break;
                 case "3": Corridor.Enter(); break;
                 default: UI.InvalidInput(); Enter(); break;

@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\DialogueSystem.cs" />
+    <Compile Include="Core\Item.cs" />
     <Compile Include="Core\Logger.cs" />
     <Compile Include="Core\Player.cs" />
     <Compile Include="Core\UI.cs" />
     <Compile Include="Items\Lantern.cs" />
     <Compile Include="Locations\Corridor.cs" />
     <Compile Include="Locations\StartRoom.cs" />
+    <Compile Include="Npcs\AlchemistGhost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

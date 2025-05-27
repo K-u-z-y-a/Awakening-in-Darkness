@@ -12,7 +12,7 @@ namespace Пробуждение_Во_Тьме.Locations
             Logger.Log("Игрок вошёл в коридор"); // Добавили логирование входа
             Console.Clear();
 
-            if (Lantern.IsTaken) // Упростили обращение к Lantern
+            if (Player.HasItem<Lantern>())
             {
                 UI.PrintWithColor("С фонарём вы видите:\n- Три двери с символами\n- Кровавые следы", ConsoleColor.DarkRed);
             }
@@ -20,16 +20,27 @@ namespace Пробуждение_Во_Тьме.Locations
             {
                 UI.PrintWithColor("Вы спотыкаетесь в темноте! (-10 HP)", ConsoleColor.Red);
                 Player.Health -= 10;
+                if (Player.Health <= 0)
+                {
+                    Logger.Log("Игрок погиб!");
+                    GameOver(); // Можно добавить этот метод
+                }
                 Logger.Log($"Игрок получил урон. Текущее здоровье: {Player.Health}"); // Логируем урон
             }
 
             UI.ShowChoices(
                 "1. Дверь с рунами",
                 "2. Дверь с механизмами",
-                "3. Вернуться назад"
-            );
+                "3. Поговорить с призраком",  // Новая опция
+                "4. Вернуться назад"
+);
 
             HandleChoice(Console.ReadLine());
+        }
+
+        private static void GameOver()
+        {
+            throw new NotImplementedException();
         }
 
         private static void HandleChoice(string choice)
@@ -37,10 +48,7 @@ namespace Пробуждение_Во_Тьме.Locations
             switch (choice)
             {
                 case "3":
-                    StartRoom.Enter("возврат из коридора"); // Добавили причину
-                    break;
-                default:
-                    UI.InvalidInput();
+                    Npcs.AlchemistGhost.Initialize();
                     Enter();
                     break;
             }
