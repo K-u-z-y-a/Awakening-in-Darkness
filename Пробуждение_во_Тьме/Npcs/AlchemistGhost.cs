@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using Пробуждение_Во_Тьме.Core;
 
 namespace Пробуждение_Во_Тьме.Npcs
 {
-    public static class AlchemistGhost
+    public static void Initialize()
     {
-        public static void Initialize()
+        var ghost = new Npc
         {
-            var ghost = new Core.Npc
+            Name = "Призрак Алхимика",
+            DialogueLines = new List<DialogueLine>
+        {
+            new DialogueLine
             {
-                Name = "Призрак Алхимика",
-                DialogueLines = new List<Core.DialogueLine>
+                Text = "Ты наконец пробудился... Лабиринт ждёт.",
+                Color = ConsoleColor.Cyan
+            },
+            new DialogueLine
+            {
+                Text = "Выбери путь мудрости, или повтори мою ошибку.",
+                Color = ConsoleColor.Cyan,
+                Choices = new List<string> // Явно инициализируем List<string>
                 {
-                    new Core.DialogueLine
-                    {
-                        Text = "Ты наконец пробудился... Лабиринт ждёт.",
-                        Color = ConsoleColor.Cyan
-                    },
-                    new Core.DialogueLine
-                    {
-                        Text = "Выбери путь мудрости, или повтори мою ошибку.",
-                        Color = ConsoleColor.Cyan,
-                        Choices = { "1. Спросить об ошибке", "2. Уйти" }
-                    }
+                    "1. Спросить об ошибке",
+                    "2. Уйти"
                 }
-            };
-
-            Core.DialogueSystem.StartDialogue(ghost);
+            }
         }
+        };
+        DialogueSystem.StartDialogue(ghost);
     }
 }

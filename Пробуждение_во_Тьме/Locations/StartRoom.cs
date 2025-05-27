@@ -26,10 +26,18 @@ namespace Пробуждение_Во_Тьме.Locations
         {
             switch (choice)
             {
-                case "1": // Взять фонарь
-                    var lantern = new Lantern();
-                    lantern.Take();
-                    Player.Inventory.Add(lantern); break;
+                case "1":
+                    if (!Player.HasItem<Lantern>())
+                    {
+                        var lantern = new Lantern();
+                        lantern.Take();
+                        Player.Inventory.Add(lantern);
+                    }
+                    else
+                    {
+                        UI.PrintWithColor("Фонарь уже у вас.", ConsoleColor.Gray);
+                    }
+                    break;
                 case "2": ExamineSymbols(); break;
                 case "3": Corridor.Enter(); break;
                 default: UI.InvalidInput(); Enter(); break;

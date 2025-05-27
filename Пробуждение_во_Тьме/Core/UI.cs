@@ -11,7 +11,7 @@ namespace Пробуждение_Во_Тьме.Core
             Console.ResetColor();
         }
 
-        public static void ShowChoices(params string[] choices)
+        public static void ShowChoices(System.Collections.Generic.List<string> choices1, params string[] choices)
         {
             Console.WriteLine("\nЧто делаем?");
             foreach (var choice in choices)
@@ -29,6 +29,15 @@ namespace Пробуждение_Во_Тьме.Core
         public static void InvalidInput()
         {
             PrintWithColor("Неверный ввод!", ConsoleColor.Red);
+        }
+
+        public static void ShowInventory()
+        {
+            Console.WriteLine("\nИнвентарь:");
+            foreach (var item in Player.Inventory)
+            {
+                Console.WriteLine($"- {item.Name}: {item.Description}");
+            }
         }
     }
 }
