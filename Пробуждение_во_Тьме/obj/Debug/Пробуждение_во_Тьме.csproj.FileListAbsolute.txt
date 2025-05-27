@@ -1,0 +1,6 @@
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\Пробуждение_во_Тьме.exe.config
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\Пробуждение_во_Тьме.exe
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\Пробуждение_во_Тьме.pdb
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\Пробуждение_во_Тьме.csprojAssemblyReference.cache
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\Пробуждение_во_Тьме.exe
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\Пробуждение_во_Тьме.pdb
