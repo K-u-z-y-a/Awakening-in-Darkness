@@ -6,11 +6,11 @@ namespace Пробуждение_Во_Тьме.Core
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public Action OnTake { get; set; }
+        public bool IsTaken { get; protected set; } // Переносим флаг сюда
 
         public virtual void Take()
         {
-            OnTake?.Invoke();
+            IsTaken = true;
             Logger.Log($"Предмет взят: {Name}");
         }
     }

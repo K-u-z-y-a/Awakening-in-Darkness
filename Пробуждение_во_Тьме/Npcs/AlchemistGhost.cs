@@ -4,12 +4,14 @@ using Пробуждение_Во_Тьме.Core;
 
 namespace Пробуждение_Во_Тьме.Npcs
 {
-    public static void Initialize()
+    public static class AlchemistGhost
     {
-        var ghost = new Npc
+        public static void Initialize()
         {
-            Name = "Призрак Алхимика",
-            DialogueLines = new List<DialogueLine>
+            var ghost = new Npc
+            {
+                Name = "Призрак Алхимика",
+                DialogueLines = new List<DialogueLine>
         {
             new DialogueLine
             {
@@ -27,7 +29,8 @@ namespace Пробуждение_Во_Тьме.Npcs
                 }
             }
         }
-        };
-        DialogueSystem.StartDialogue(ghost);
+            };
+            DialogueSystem.StartDialogue(ghost);
+        }
     }
 }

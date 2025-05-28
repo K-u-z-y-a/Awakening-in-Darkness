@@ -1,6 +1,6 @@
 ﻿using System;
-using Пробуждение_Во_Тьме.Locations;
 using Пробуждение_Во_Тьме.Core;
+using Пробуждение_Во_Тьме.Locations;
 
 namespace Пробуждение_Во_Тьме
 {
@@ -8,22 +8,25 @@ namespace Пробуждение_Во_Тьме
     {
         static void Main()
         {
-            // Настройка логгера
-            Logger.ClearLog();
-            Logger.Log("=== Игра запущена ===");
+            Console.Title = "Пробуждение во Тьме";
 
             try
             {
-                // Запуск игры
-                Console.Title = "Пробуждение во Тьме";
-                StartRoom.Enter(); // Используем значение по умолчанию ("начало игры")
+                while (true) // Бесконечный цикл
+                {
+                    StartRoom.Enter();
+
+                    // Добавляем паузу перед очисткой
+                    Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+                    Console.ReadKey();
+                }
             }
             catch (Exception ex)
             {
-                // Логирование критических ошибок
-                Logger.Log($"КРАШ: {ex.Message}");
+                Logger.Log($"КРИТИЧЕСКАЯ ОШИБКА: {ex}");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Игра завершилась с ошибкой. Смотрите game_log.txt");
+                Console.WriteLine($"Игра завершилась с ошибкой: {ex.Message}");
+                Console.WriteLine("Подробности в game_log.txt");
                 Console.ResetColor();
                 Console.ReadKey();
             }

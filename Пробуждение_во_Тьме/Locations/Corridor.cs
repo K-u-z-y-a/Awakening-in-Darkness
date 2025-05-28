@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Пробуждение_Во_Тьме.Core;
 using Пробуждение_Во_Тьме.Items; // Добавили для доступа к Lantern
 using Пробуждение_Во_Тьме.Locations; // Добавили для StartRoom
@@ -28,12 +29,12 @@ namespace Пробуждение_Во_Тьме.Locations
                 Logger.Log($"Игрок получил урон. Текущее здоровье: {Player.Health}"); // Логируем урон
             }
 
-            UI.ShowChoices(
+            UI.ShowChoices(new List<string> {
                 "1. Дверь с рунами",
                 "2. Дверь с механизмами",
                 "3. Поговорить с призраком",  // Новая опция
                 "4. Вернуться назад"
-);
+            });
 
             HandleChoice(Console.ReadLine());
         }

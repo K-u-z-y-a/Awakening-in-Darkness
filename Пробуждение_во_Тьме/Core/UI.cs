@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Пробуждение_Во_Тьме.Core
 {
@@ -11,13 +12,14 @@ namespace Пробуждение_Во_Тьме.Core
             Console.ResetColor();
         }
 
-        public static void ShowChoices(System.Collections.Generic.List<string> choices1, params string[] choices)
+        public static void ShowChoices(List<string> choices)
         {
             Console.WriteLine("\nЧто делаем?");
             foreach (var choice in choices)
             {
-                Console.WriteLine(choice);
+                Console.WriteLine(choice); // Добавляем вывод каждого варианта
             }
+            Console.Write("Ваш выбор: "); // Явно показываем, где вводить
         }
 
         public static void WaitForInput()
@@ -38,6 +40,11 @@ namespace Пробуждение_Во_Тьме.Core
             {
                 Console.WriteLine($"- {item.Name}: {item.Description}");
             }
+        }
+        public static void WaitForInput(string message = "Нажмите любую клавишу чтобы продолжить...")
+        {
+            Console.WriteLine($"\n{message}");
+            Console.ReadKey(true); // true - чтобы символ не отображался
         }
     }
 }
