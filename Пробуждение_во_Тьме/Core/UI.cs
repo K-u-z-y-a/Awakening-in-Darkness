@@ -22,6 +22,12 @@ namespace Пробуждение_Во_Тьме.Core
         {
             PrintWithColor("Неверный ввод!", ConsoleColor.Red);
         }
+
+        internal static void ShowChoices(object choices)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void ShowChoices(List<string> choices)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -45,6 +51,29 @@ namespace Пробуждение_Во_Тьме.Core
         private static void DrawBoxBottom()
         {
             Console.WriteLine($"└{new string('─', 28)}┘");
+        }
+        public static void PrintCentered(string text, ConsoleColor color = ConsoleColor.White)
+        {
+            Console.ForegroundColor = color;
+            int padding = (Console.WindowWidth - text.Length) / 2;
+            Console.WriteLine(text.PadLeft(padding + text.Length));
+            Console.ResetColor();
+        }
+        public static void DrawMenuBox(string title, List<string> items)
+        {
+            int width = Console.WindowWidth - 4;
+            string border = new string('═', width);
+
+            PrintCentered($"╔{border}╗");
+            PrintCentered($"║ {title.PadRight(width - 2)} ║");
+            PrintCentered($"╠{border}╣");
+
+            foreach (var item in items)
+            {
+                PrintCentered($"║ {item.PadRight(width - 2)} ║");
+            }
+
+            PrintCentered($"╚{border}╝");
         }
     }
 }
