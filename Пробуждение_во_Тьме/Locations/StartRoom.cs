@@ -25,7 +25,7 @@ namespace Пробуждение_Во_Тьме.Locations
             UI.ShowChoices(choices);
             HandleChoice(Console.ReadLine());
         }
-
+        //Проверка кода
         private static void HandleChoice(string choice)
         {
             try
@@ -66,5 +66,3 @@ namespace Пробуждение_Во_Тьме.Locations
         }
     }
 }
-
-//Проверка кода
