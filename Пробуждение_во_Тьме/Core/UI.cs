@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Пробуждение_Во_Тьме.Core
 {
@@ -11,17 +12,6 @@ namespace Пробуждение_Во_Тьме.Core
             Console.WriteLine(text);
             Console.ResetColor();
         }
-
-        public static void ShowChoices(List<string> choices)
-        {
-            Console.WriteLine("\nЧто делаем?");
-            foreach (var choice in choices)
-            {
-                Console.WriteLine(choice); // Добавляем вывод каждого варианта
-            }
-            Console.Write("Ваш выбор: "); // Явно показываем, где вводить
-        }
-
         public static void WaitForInput()
         {
             Console.WriteLine("\nНажмите любую клавишу...");
@@ -32,19 +22,29 @@ namespace Пробуждение_Во_Тьме.Core
         {
             PrintWithColor("Неверный ввод!", ConsoleColor.Red);
         }
+        public static void ShowChoices(List<string> choices)
+        {
+            Console.OutputEncoding = Encoding.UTF8;
 
-        public static void ShowInventory()
-        {
-            Console.WriteLine("\nИнвентарь:");
-            foreach (var item in Player.Inventory)
+            DrawBoxTop("Действия");
+            foreach (var choice in choices)
             {
-                Console.WriteLine($"- {item.Name}: {item.Description}");
+                Console.WriteLine($"  ◉ {choice}");
             }
+            DrawBoxBottom();
+            Console.Write("Ваш выбор: ");
         }
-        public static void WaitForInput(string message = "Нажмите любую клавишу чтобы продолжить...")
+
+        private static void DrawBoxTop(string title)
         {
-            Console.WriteLine($"\n{message}");
-            Console.ReadKey(true); // true - чтобы символ не отображался
+            Console.WriteLine($"┌{new string('─', title.Length + 2)}┐");
+            Console.WriteLine($"│ {title} │");
+            Console.WriteLine($"├{new string('─', 28)}┤");
+        }
+
+        private static void DrawBoxBottom()
+        {
+            Console.WriteLine($"└{new string('─', 28)}┘");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Пробуждение_Во_Тьме.Core;
 using Пробуждение_Во_Тьме.Locations;
 
@@ -8,6 +9,18 @@ namespace Пробуждение_Во_Тьме
     {
         static void Main()
         {
+            // Устанавливаем размеры (ширина x высота в символах)
+            Console.WindowWidth = 100;  // Ширина
+            Console.WindowHeight = 30;  // Высота
+
+            // Увеличиваем буфер, чтобы можно было скроллить
+            Console.BufferWidth = 100;
+            Console.BufferHeight = 1000;
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.GetEncoding(65001);
+            // Включаем Unicode для символов
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
             Console.Title = "Пробуждение во Тьме";
 
             try

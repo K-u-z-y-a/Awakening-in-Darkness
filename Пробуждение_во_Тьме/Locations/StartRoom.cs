@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using Пробуждение_Во_Тьме.Core;
 using Пробуждение_Во_Тьме.Items;
 
@@ -20,7 +21,6 @@ namespace Пробуждение_Во_Тьме.Locations
         "3. Выйти в дверь"
     };
 
-            //Console.WriteLine($"Отладка: {choices.Count} вариантов"); // Проверяем количество
 
             UI.ShowChoices(choices);
             HandleChoice(Console.ReadLine());
@@ -39,14 +39,12 @@ namespace Пробуждение_Во_Тьме.Locations
                             lantern.Take();
                             Player.Inventory.Add(lantern);
 
-                            // Добавляем паузу перед обновлением экрана
-                            UI.PrintWithColor("Фонарь теперь в вашем инвентаре.", ConsoleColor.Green);
-                            UI.WaitForInput();
-                        }
-                        else
-                        {
-                            UI.PrintWithColor("Фонарь уже у вас.", ConsoleColor.Gray);
-                            UI.WaitForInput(); // Пауза и здесь
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("\n░░░░░░░░░░░░░░░░░░░░░░░░░");
+                            Console.WriteLine("░ ФОНАРЬ ДОБАВЛЕН В ИНВЕНТАРЬ ░");
+                            Console.WriteLine("░░░░░░░░░░░░░░░░░░░░░░░░░");
+                            Console.ResetColor();
+                            Thread.Sleep(1500);
                         }
                         break;
                     case "2": ExamineSymbols(); break;
