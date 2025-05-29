@@ -1,0 +1,10 @@
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.exe
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.dll.config
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.deps.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.runtimeconfig.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.runtimeconfig.dev.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.dll
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Awakening_in_Darkness.pdb
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Awakening_in_Darkness.csprojAssemblyReference.cache
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Awakening_in_Darkness.dll
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Awakening_in_Darkness.pdb

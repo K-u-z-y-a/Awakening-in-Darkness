@@ -1,0 +1,10 @@
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.exe
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.dll.config
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.deps.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.runtimeconfig.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.runtimeconfig.dev.json
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.dll
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\bin\Debug\netcoreapp3.1\Пробуждение_во_Тьме.pdb
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Пробуждение_во_Тьме.csprojAssemblyReference.cache
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Пробуждение_во_Тьме.dll
+C:\Users\033KuznetsovSO\Desktop\VS_Projects\Пробуждение_во_Тьме\obj\Debug\netcoreapp3.1\Пробуждение_во_Тьме.pdb
