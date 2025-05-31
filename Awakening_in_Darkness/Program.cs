@@ -3,35 +3,28 @@ using System.Text;
 using Awakening_in_Darkness.Core;
 using Awakening_in_Darkness.Locations;
 
-namespace Пробуждение_Во_Тьме
+namespace Awakening_in_Darkness
 {
     class Program
     {
         static void Main()
         {
-            // Устанавливаем размеры (ширина x высота в символах)
-            Console.WindowWidth = 100;  // Ширина
-            Console.WindowHeight = 30;  // Высота
-
-            // Увеличиваем буфер, чтобы можно было скроллить
+            // Настройки консоли
+            Console.WindowWidth = 100;
+            Console.WindowHeight = 30;
             Console.BufferWidth = 100;
             Console.BufferHeight = 1000;
             Console.OutputEncoding = Encoding.UTF8;
-            Console.OutputEncoding = System.Text.Encoding.GetEncoding(65001);
-            // Включаем Unicode для символов
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.InputEncoding = Encoding.UTF8;
             Console.Title = "Пробуждение во Тьме";
 
             try
             {
-                while (true) // Бесконечный цикл
-                {
-                    StartRoom.Enter();
+                // Убираем начальное ожидание и сразу запускаем игру
+                StartRoom.Enter();
 
-                    // Добавляем паузу перед очисткой
-                    Console.WriteLine("\nНажмите любую клавишу для продолжения...");
-                    Console.ReadKey();
+                while (true) // Основной игровой цикл
+                {
+                    // Обработка ввода происходит внутри StartRoom/Corridor
                 }
             }
             catch (Exception ex)

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Awakening_in_Darkness.Items;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Awakening_in_Darkness.Core
 {
@@ -14,7 +14,7 @@ namespace Awakening_in_Darkness.Core
         // Добавим метод для поиска предмета по имени
         public static Item GetItem(string name)
         {
-            return Inventory.Find(item => item.Name.Equals(name));
+            return Inventory.Find(item => item?.Name?.Equals(name, StringComparison.OrdinalIgnoreCase) ?? false);
         }
 
     }

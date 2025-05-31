@@ -23,11 +23,6 @@ namespace Awakening_in_Darkness.Core
             PrintWithColor("Неверный ввод!", ConsoleColor.Red);
         }
 
-        internal static void ShowChoices(object choices)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void ShowChoices(List<string> choices)
         {
             Console.OutputEncoding = Encoding.UTF8;
